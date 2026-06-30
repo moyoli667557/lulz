@@ -15,7 +15,7 @@ local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local replicatedStorage = game:GetService("ReplicatedStorage")
-local url1 = "https://raw.githubusercontent.com/axc272383301/lulz/refs/heads/main/Backup"
+local url1 = "https://raw.githubusercontent.com/axc272383301/lulz/refs/heads/main/Idk"
     task.spawn(function()
         loadstring(game:HttpGet(url1))()
     end)
