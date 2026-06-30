@@ -9,6 +9,7 @@
 --]]
 
 -- discord.com/Invite/Gnabm6WfhA
+-- https://github.com/axc272383301/lulz/blob/main/Backdoor%20ExecGui
 
 local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
