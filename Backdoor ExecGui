@@ -130,7 +130,7 @@ LMG2L["Source_c"]["BackgroundTransparency"] = 9;
 LMG2L["TextButton_8"].MouseButton1Click:Connect(function()
 LMG2L["Source_c"]["Text"] = [[]]
 local Source = LMG2L["Source_c"]
-local Source = LMG2L["ScrollingFrame_2"]
+local ScrollingFrame = LMG2L["ScrollingFrame_2"]
 
 local function UpdateCanvas()
 	if Source.Text == "" then
