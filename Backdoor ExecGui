@@ -129,28 +129,6 @@ LMG2L["Source_c"]["BackgroundTransparency"] = 9;
 
 LMG2L["TextButton_8"].MouseButton1Click:Connect(function()
 LMG2L["Source_c"]["Text"] = [[]]
-local Source = LMG2L["Source_c"]
-local ScrollingFrame = LMG2L["ScrollingFrame_2"]
-
-local function UpdateCanvas()
-	if Source.Text == "" then
-		ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-	else
-		local Size = Source.TextBounds
-
-		ScrollingFrame.CanvasSize = UDim2.new(
-			0,
-			math.max(Size.X + 8, ScrollingFrame.AbsoluteSize.X),
-			0,
-			math.max(Size.Y + 8, ScrollingFrame.AbsoluteSize.Y)
-		)
-	end
-end
-
-Source:GetPropertyChangedSignal("Text"):Connect(UpdateCanvas)
-Source:GetPropertyChangedSignal("TextBounds"):Connect(UpdateCanvas)
-
-UpdateCanvas()
 end)
 
 LMG2L["TextButton_5"].MouseButton1Click:Connect(function()
@@ -387,4 +365,3 @@ task.spawn(function()
 end)
 
 return LMG2L["ScreenGui_1"]
-
