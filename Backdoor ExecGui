@@ -7,7 +7,7 @@
 ██████╦╝██║░░██║╚█████╔╝██║░╚██╗██████╔╝╚█████╔╝╚█████╔╝██║░░██║
 ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
 
-Invite Discord Server:discord.com/Invite/Gnabm6WfhA
+Invite Discord Server:discord.com/invite/Gnabm6WfhA
 --]]
 
 local CollectionService = game:GetService("CollectionService")
