@@ -12,7 +12,6 @@ Invite Discord Server: https://discord.com/invite/Gnabm6WfhA
 https://github.com/moyoli667557/lulz/blob/main/Backdoor%20ExecGui
 --]]
 
-local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local replicatedStorage = game:GetService("ReplicatedStorage")
@@ -50,7 +49,7 @@ LMG2L["TextLabel_4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSa
 LMG2L["TextLabel_4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 LMG2L["TextLabel_4"]["BackgroundTransparency"] = 99;
 LMG2L["TextLabel_4"]["Size"] = UDim2.new(0, 296, 0, 30);
-LMG2L["TextLabel_4"]["Text"] = [[Backdoor  -  discord.com/invite/Gnabm6WfhA]];
+LMG2L["TextLabel_4"]["Text"] = [[Backdoor  -  discord.com/Invite/Gnabm6WfhA]];
 LMG2L["TextLabel_4"]["Position"] = UDim2.new(0, 4, 0, 0);
 LMG2L["TextButton_5"] = Instance.new("TextButton", LMG2L["Frame_3"]);
 LMG2L["TextButton_5"]["TextWrapped"] = true;
@@ -113,7 +112,7 @@ LMG2L["Source_c"]["TextWrapped"] = false;
 LMG2L["Source_c"]["AutoLocalize"] = false;
 LMG2L["Source_c"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
 LMG2L["Source_c"]["TextSize"] = 14;
-LMG2L["Source_c"]["AutomaticSize"] = Enum.AutomaticSize.XY; 
+LMG2L["Source_c"]["AutomaticSize"] = Enum.AutomaticSize.XY; -- jumlahnya teks dan batas 
 LMG2L["Source_c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 LMG2L["Source_c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
 LMG2L["Source_c"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
@@ -171,6 +170,8 @@ for _, obj in ipairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 end)
 
 LMG2L["TextButton_6"].MouseButton1Click:Connect(function()
+if LMG2L["Source_c"].Text ~= "" then	
+pcall(function()	
 for _, obj in ipairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 			if obj:IsA("RemoteEvent") then
 				obj:FireServer(LMG2L["Source_c"].Text)
@@ -184,6 +185,8 @@ for _, obj in ipairs(game:GetService("ReplicatedStorage"):GetChildren()) do
 				obj:InvokeServer(LMG2L["Source_c"].Text)
 			end
 		end
+	end)	
+	end
 end)
 
 local Source = LMG2L["Source_c"]
