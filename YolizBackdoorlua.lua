@@ -137,7 +137,6 @@ LMG2L["TextButton_a"]["Position"] = UDim2.new(0, 4, 0, 258);
 LMG2L["ScrollingFrame_b"] = Instance.new("ScrollingFrame", LMG2L["log_Slog_5"]);
 LMG2L["ScrollingFrame_b"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
 LMG2L["ScrollingFrame_b"]["Size"] = UDim2.new(0, 444, 0, 246);
--- LMG2L["ScrollingFrame_b"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
 LMG2L["ScrollingFrame_b"]["Position"] = UDim2.new(0, 4, 0, 4);
 LMG2L["ScrollingFrame_b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 LMG2L["Servertext_c"] = Instance.new("TextBox", LMG2L["ScrollingFrame_b"]);
