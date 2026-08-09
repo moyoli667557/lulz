@@ -621,6 +621,7 @@ end
 Source:GetPropertyChangedSignal("Text"):Connect(UpdateHighlight)
 UpdateHighlight()
 
+
 task.spawn(function()
 	local ScrollingFrame = LMG2L["ScrollingFrame_b"]
 	local Source = LMG2L["Servertext_c"]
@@ -635,9 +636,9 @@ task.spawn(function()
 
 		ScrollingFrame.CanvasSize = UDim2.new(
 			0,
-			math.max(Size.X + 8, ScrollingFrame.AbsoluteSize.X),
+			math.max(Size.X + 3, ScrollingFrame.AbsoluteSize.X),
 			0,
-			math.max(Size.Y + 8, ScrollingFrame.AbsoluteSize.Y)
+			math.max(Size.Y + 3, ScrollingFrame.AbsoluteSize.Y)
 		)
 	end
 
@@ -647,5 +648,6 @@ task.spawn(function()
 
 	UpdateCanvas()
 end)
+
 
 return LMG2L["ScreenGui_1"]
