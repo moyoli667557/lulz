@@ -6,7 +6,8 @@
 ██████╦╝██║░░██║╚█████╔╝██║░╚██╗██████╔╝╚█████╔╝╚█████╔╝██║░░██║
 ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
 
-Invite Discord Server:discord.com/invite/Gnabm6WfhA
+Invite Discord Server:discord.com/invite/Gnabm6WfhA 
+backdoor invite server: https://discord.gg/kJv9g5Ka5r
 
 source script : backdoor exe v6x (@ik4os)
 --]]
@@ -153,7 +154,7 @@ LMG2L["Servertext_c"]["AutomaticSize"] = Enum.AutomaticSize.XY;
 LMG2L["Servertext_c"]["MultiLine"] = true;
 LMG2L["Servertext_c"]["ClearTextOnFocus"] = false;
 LMG2L["Servertext_c"]["Size"] = UDim2.new(0, 448, 0, 290);
-LMG2L["Servertext_c"]["Text"] = [[-- https://discord.com/invite/Gnabm6WfhA]];
+LMG2L["Servertext_c"]["Text"] = [[-- https://discord.gg/kJv9g5Ka5r]];
 LMG2L["Servertext_c"]["BackgroundTransparency"] = 1;
 LMG2L["TextLabel2_d"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
 LMG2L["TextLabel2_d"]["TextWrapped"] = true;
