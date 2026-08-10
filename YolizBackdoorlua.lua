@@ -397,6 +397,8 @@ local function scanGame()
 end
 
 LMG2L["TextButton3_9"].MouseButton1Click:Connect(function()
+pcall(scanGame)
+wait(2)
 if not attached then
 if scanGame() then
 notify("PlaceId : " .. tostring(game.PlaceId))
