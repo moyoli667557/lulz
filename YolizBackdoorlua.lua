@@ -621,33 +621,26 @@ end
 Source:GetPropertyChangedSignal("Text"):Connect(UpdateHighlight)
 UpdateHighlight()
 
+local function updateCanvasSize()
+    local textSize = LMG2L["Servertext_c"].TextBounds
 
-task.spawn(function()
-	local ScrollingFrame = LMG2L["ScrollingFrame_b"]
-	local Source = LMG2L["Servertext_c"]
 
-	local function UpdateCanvas()
-		if Source.Text == "" then
-			ScrollingFrame.CanvasSize = UDim2.new(0,0,0,0)
-			return
-		end
+    LMG2L["Servertext_c"].Size = UDim2.new(
+        0, math.max(textSize.X + 10, 239),
+        0, math.max(textSize.Y + 10, 239)
+    )
 
-		local Size = Source.AbsoluteSize
 
-		ScrollingFrame.CanvasSize = UDim2.new(
-			0,
-			math.max(Size.X + 3, ScrollingFrame.AbsoluteSize.X),
-			0,
-			math.max(Size.Y + 3, ScrollingFrame.AbsoluteSize.Y)
-		)
-	end
+    LMG2L["ScrollingFrame_b"].CanvasSize = UDim2.new(
+        0, LMG2L["Servertext_c"].Size.X.Offset,
+        0, LMG2L["Servertext_c"].Size.Y.Offset
+    )
+end
 
-	Source:GetPropertyChangedSignal("Text"):Connect(UpdateCanvas)
-	Source:GetPropertyChangedSignal("AbsoluteSize"):Connect(UpdateCanvas)
-	ScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(UpdateCanvas)
+LMG2L["Servertext_c"]:GetPropertyChangedSignal("Text"):Connect(updateCanvasSize)
+LMG2L["Servertext_c"].Focused:Connect(updateCanvasSize)
+LMG2L["Servertext_c"].FocusLost:Connect(updateCanvasSize)
 
-	UpdateCanvas()
-end)
-
+updateCanvasSize()
 
 return LMG2L["ScreenGui_1"]
