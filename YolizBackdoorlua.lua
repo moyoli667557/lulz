@@ -390,7 +390,7 @@ local function scanGame()
         notify("Backdoored/Injected!")
     end
     if not found then
-        notify("Unable to find backdoor event/function, If it doesn't work, game is not backdoored")
+        notify("Unable to find backdoor, If it doesn't work, game is not backdoored")
     end
 
 	return found;
