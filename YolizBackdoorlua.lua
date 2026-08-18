@@ -6,11 +6,15 @@
 ██████╦╝██║░░██║╚█████╔╝██║░╚██╗██████╔╝╚█████╔╝╚█████╔╝██║░░██║
 ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
 
+--------------------------------------------------------------------------
+
 Invite Discord Server:discord.com/invite/Gnabm6WfhA 
 backdoor invite server: https://discord.gg/kJv9g5Ka5r
 
 source script : backdoor exe v6x (@ik4os)
---]]
+
+--------------------------------------------------------------------------
+]]
 
 local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
@@ -35,6 +39,8 @@ local backdoor = nil;
 local commonPlaces = {
 	ReplicatedStorage,
 	Workspace,
+	ReplicatedFirst,
+	chat,
 	Lighting
 };
 local remoteCodes = {};
