@@ -8,7 +8,7 @@
 
 --------------------------------------------------------------------------
 
-Invite Discord Server:discord.com/invite/Gnabm6WfhA 
+Invite Discord Server : discord.com/invite/Gnabm6WfhA 
 backdoor invite server: https://discord.gg/kJv9g5Ka5r
 
 source script : backdoor exe v6x (@ik4os)
@@ -38,28 +38,7 @@ local mathRandom = math.random
 local attached = false;
 local backdoor = nil;
 local commonPlaces = {
-CollectionService,
-ReplicatedStorage,
-Workspace,
-ReplicatedFirst,
-chat,
-StarterGui,
-RobloxReplicatedStorage,
-TextChatService,
-StarterPlayer,
-NetworkClient,
-CorePackages,
-SoundService,
-CorePackages,
-MaterialService,
-PlatformLibraries,
-StarterGui,
-Teams,
-StarterPlayer,
-ServerStorage,
-StarterPack,
-TextChatService,	
-Lighting
+	CollectionService,ReplicatedStorage,Workspace,ReplicatedFirst,chat,StarterGui,RobloxReplicatedStorage,TextChatService,StarterPlayer,NetworkClient,CorePackages,SoundService,CorePackages,MaterialService,PlatformLibraries,StarterGui,Teams,StarterPlayer,ServerStorage,StarterPack,TextChatService,Lighting
 };
 local remoteCodes = {};
 
