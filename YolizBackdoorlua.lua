@@ -28,6 +28,7 @@ local TweenService = game:GetService("TweenService")
 local Lighting = game:GetService("Lighting")
 local Workspace = game:GetService("Workspace")
 local RobloxReplicatedStorage = game:GetService("RobloxReplicatedStorage")
+local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 local dateTimeNow = DateTime.now
 local tableFind = table.find
 local taskSpawn = task.spawn
@@ -37,17 +38,32 @@ local mathRandom = math.random
 local attached = false;
 local backdoor = nil;
 local commonPlaces = {
-	ReplicatedStorage,
-	Workspace,
-	ReplicatedFirst,
-	chat,
-	Lighting
+CollectionService,
+ReplicatedStorage,
+Workspace,
+ReplicatedFirst,
+chat,
+StarterGui,
+RobloxReplicatedStorage,
+TextChatService,
+StarterPlayer,
+NetworkClient,
+CorePackages,
+SoundService,
+CorePackages,
+MaterialService,
+PlatformLibraries,
+StarterGui,
+Teams,
+StarterPlayer,
+ServerStorage,
+StarterPack,
+TextChatService,	
+Lighting
 };
 local remoteCodes = {};
 
 -- gui
-
-local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 
 local LMG2L = {};
 LMG2L["ScreenGui_1"] = Instance.new("ScreenGui")
