@@ -28,7 +28,6 @@ local TweenService = game:GetService("TweenService")
 local Lighting = game:GetService("Lighting")
 local Workspace = game:GetService("Workspace")
 local RobloxReplicatedStorage = game:GetService("RobloxReplicatedStorage")
-local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 local dateTimeNow = DateTime.now
 local tableFind = table.find
 local taskSpawn = task.spawn
@@ -41,6 +40,7 @@ local commonPlaces = {
   CollectionService,ReplicatedStorage,Workspace,ReplicatedFirst,chat,StarterGui,RobloxReplicatedStorage,TextChatService,StarterPlayer,NetworkClient,CorePackages,SoundService,CorePackages,MaterialService,PlatformLibraries,StarterGui,Teams,StarterPlayer,ServerStorage,StarterPack,TextChatService,Lighting
 };
 local remoteCodes = {};
+local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 
 -- gui
 
