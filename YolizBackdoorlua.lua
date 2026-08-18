@@ -609,6 +609,7 @@ local function UpdateHighlight()
 	Globals_.Text = Highlight(s,global_env)
 	RemoteHighlight_.Text = Highlight(s,{
 		"FireServer",
+		"backdoor",
 		"InvokeServer"
 	})
 
