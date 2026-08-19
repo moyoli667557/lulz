@@ -301,16 +301,6 @@ LMG2L["ScreenGui_1"]:Destroy()
 LMG2L["ScreenGui_1"]:Remove()
 end)
 
-local mt = getrawmetatable(game)
-local oldmt = mt.__index
-make_writeable(mt)
-
-mt.__index = function(t,i)
-   if i == "Kick" then
-       return nil
-   end
-   return oldmt(t,i)
-end
 
 local function notify(text)
 	game:GetService("StarterGui"):SetCore(
