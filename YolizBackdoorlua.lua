@@ -39,6 +39,9 @@ local backdoor = nil;
 local commonPlaces = {
 	ReplicatedStorage,
 	Workspace,
+	ReplicatedFirst,
+	RobloxReplicatedStorage,
+	ServerStorage,
 	Lighting
 };
 local remoteCodes = {};
