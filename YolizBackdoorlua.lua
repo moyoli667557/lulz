@@ -8,10 +8,10 @@
 
 --------------------------------------------------------------------------
 
-Invite Discord Server : discord.com/invite/Gnabm6WfhA 
-backdoor invite server: https://discord.gg/kJv9g5Ka5r
+	Invite Discord Server : discord.com/invite/Gnabm6WfhA 
+	backdoor invite server: https://discord.gg/kJv9g5Ka5r
 
-source script : backdoor exe v6x (@ik4os)
+	source script : backdoor exe v6x (@ik4os)
 
 --------------------------------------------------------------------------
 ]]
@@ -205,6 +205,17 @@ LMG2L["TextButton_f"]["Visible"] = false;
 LMG2L["TextButton2_3"]["Visible"] = false;
 
 -- function 
+
+local mt = getrawmetatable(game)
+local oldmt = mt.__index
+make_writeable(mt)
+
+mt.__index = function(t,i)
+   if i == "Kick" then
+       return nil
+   end
+   return oldmt(t,i)
+end
 
 wait(0.4)
 local tweenInfo = TweenInfo.new(
