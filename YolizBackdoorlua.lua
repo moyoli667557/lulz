@@ -37,7 +37,7 @@ local mathRandom = math.random
 local attached = false;
 local backdoor = nil;
 local commonPlaces = {
-   CollectionService,ReplicatedStorage,Workspace,ReplicatedFirst,chat,StarterGui,RobloxReplicatedStorage,TextChatService,StarterPlayer,NetworkClient,CorePackages,SoundService,CorePackages,MaterialService,PlatformLibraries,StarterGui,Teams,StarterPlayer,ServerStorage,StarterPack,TextChatService,Lighting
+	CollectionService,ReplicatedStorage,Workspace,ReplicatedFirst,chat,StarterGui,RobloxReplicatedStorage,TextChatService,StarterPlayer,NetworkClient,CorePackages,SoundService,CorePackages,MaterialService,PlatformLibraries,StarterGui,Teams,StarterPlayer,ServerStorage,StarterPack,TextChatService,Lighting
 };
 local remoteCodes = {};
 local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
