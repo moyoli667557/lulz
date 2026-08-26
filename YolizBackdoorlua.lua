@@ -317,6 +317,7 @@ local function notify(text)
 			Title = "Yoliz - .gg/Gnabm6WfhA",
 			Duration = 3,
 			Text = text,
+			Icon = "rbxassetid://111390379645237"
 		}
 	)
 end
