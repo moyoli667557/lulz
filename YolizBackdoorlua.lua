@@ -7,12 +7,8 @@
 ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
 
 --------------------------------------------------------------------------
-
 	Invite Discord Server : discord.com/invite/Gnabm6WfhA 
-	backdoor invite server: https://discord.gg/kJv9g5Ka5r
-
 	source script : backdoor exe v6x (@ik4os)
-
 --------------------------------------------------------------------------
 ]]
 
