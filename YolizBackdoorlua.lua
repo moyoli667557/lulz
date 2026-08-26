@@ -197,6 +197,19 @@ LMG2L["TextLabel_e"]["Visible"] = false;
 LMG2L["TextButton_f"]["Visible"] = false;
 LMG2L["TextButton2_3"]["Visible"] = false;
 
+-- notify
+
+local function notify(text)
+	game:GetService("StarterGui"):SetCore(
+		"SendNotification",{
+			Title = "Yoliz - .gg/Gnabm6WfhA",
+			Duration = 3,
+			Text = text,
+			Icon = "rbxassetid://111390379645237"
+		}
+	)
+end
+
 -- function 
 
 local mt = getrawmetatable(game)
@@ -309,18 +322,6 @@ wait(0.7)
 LMG2L["ScreenGui_1"]:Destroy()
 LMG2L["ScreenGui_1"]:Remove()
 end)
-
-
-local function notify(text)
-	game:GetService("StarterGui"):SetCore(
-		"SendNotification",{
-			Title = "Yoliz - .gg/Gnabm6WfhA",
-			Duration = 3,
-			Text = text,
-			Icon = "rbxassetid://111390379645237"
-		}
-	)
-end
 
 local function validRemote(rm)
 	local Parent = rm.Parent
