@@ -304,7 +304,7 @@ end)
 local function notify(text)
 	game:GetService("StarterGui"):SetCore(
 		"SendNotification",{
-			Title = "Yoliz - .gg/Gnabm6WfhA",
+			Title = "Scanning",
 			Duration = 3,
 			Text = text,
 			Icon = "rbxassetid://111390379645237",
@@ -393,7 +393,7 @@ local function scanGame()
         notify("Backdoored/Injected!")
     end
     if not found then
-        notify("Unable to find backdoor, If it doesn't work, game not backdoored")
+        notify("If it doesn't work, game not backdoored")
     end
 
 	return found;
