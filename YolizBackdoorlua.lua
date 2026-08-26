@@ -12,9 +12,8 @@
 --------------------------------------------------------------------------
 ]]
 
-local inStudio = RunService:IsStudio()
-local sessionType = inStudio and "Studio" or "Live Game"
 local CollectionService = game:GetService("CollectionService")
+local TextService = game:GetService("TextService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterGui = game:GetService("StarterGui")
