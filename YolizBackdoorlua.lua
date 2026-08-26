@@ -212,17 +212,6 @@ end
 
 -- function 
 
-local mt = getrawmetatable(game)
-local oldmt = mt.__index
-make_writeable(mt)
-
-mt.__index = function(t,i)
-   if i == "Kick" then
-       return nil
-   end
-   return oldmt(t,i)
-end
-
 wait(0.4)
 local tweenInfo = TweenInfo.new(
 	0.5, 
