@@ -8,7 +8,7 @@
 
 --------------------------------------------------------------------------
 	Invite Discord Server : discord.com/invite/Gnabm6WfhA 
-	source script : backdoor exe v6x (@ik4os)
+	skidded script from : backdoor exe v6x (@ik4os)
 --------------------------------------------------------------------------
 ]]
 
@@ -140,6 +140,10 @@ LMG2L["ScrollingFrame_b"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42);
 LMG2L["ScrollingFrame_b"]["Size"] = UDim2.new(0, 444, 0, 246);
 LMG2L["ScrollingFrame_b"]["Position"] = UDim2.new(0, 4, 0, 4);
 LMG2L["ScrollingFrame_b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+LMG2L["ScrollingFrame_b"].Visible = true;
+LMG2L["ScrollingFrame_b"].Active = true;
+LMG2L["ScrollingFrame_b"].ClipsDescendants = true;
+LMG2L["ScrollingFrame_b"].ScrollingEnabled = true;
 LMG2L["Servertext_c"] = Instance.new("TextBox", LMG2L["ScrollingFrame_b"]);
 LMG2L["Servertext_c"]["Name"] = [[Servertext]];
 LMG2L["Servertext_c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
