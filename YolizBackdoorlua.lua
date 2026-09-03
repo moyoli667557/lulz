@@ -9,7 +9,7 @@
 ---------------------------------------------------------------------------------------------
 	Invite Discord Server : discord.com/invite/Gnabm6WfhA 
 	skidded script from : backdoor exe v6x (@ik4os)
-	fixed Backdoor Log Game
+	Fixed Backdoor Log Game And Scanning 
 ---------------------------------------------------------------------------------------------
 ]]
 
