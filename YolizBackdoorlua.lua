@@ -493,54 +493,89 @@ local Strings_ = NewLayer("Strings_", Color3.fromRGB(145, 246, 67), 10)
 local Tokens_ = NewLayer("Tokens_", Color3.fromRGB(200, 200, 200), 5)
 local Numbers_ = NewLayer("Numbers_", Color3.fromRGB(255, 184, 0), 6)
 
+
 local lua_keywords = {
-	"and","break","do","else","elseif","end","false",
-	"for","function","goto","if","in","local","nil",
-	"not","or","repeat","return","then","true","until",
-	"while","pcall","wait","Value","Play","Playing"
+"local","and","break","do","else","elseif","end","false",
+"for","function","goto","if","in","local","nil",
+"not","or","repeat","return","then","true","until",
+"while","pcall","wait","Value","Play","Playing","Instances","Player",
+"hookmetamethod", "hookfunction", "getgc", "filtergc", "Drawing", "getgenv", "getsenv", "getrenv", "getfenv", "setfenv",
+"makefolder", "isfolder", "isfile", "delfile", "delfolder", "getcustomasset", "fireclickdetector", "firetouchinterest", "fireproximityprompt"
 }
 
-local global_env = {"a","b","c","d","e","f","g","h","i","j","k","l","m","h","i","j","m","n","o","p","q","r","s","t","u","v","u","x","y","z","game", "Lighting", "TimeOfDay", "hookmetamethod", "hookfunction", "getgc", "filtergc", "Drawing", "getgenv", "getsenv", "getrenv", "getfenv", "local", "setfenv", "decompile", "saveinstance", "getrawmetatable", "setrawmetatable", "checkcaller", "cloneref", "clonefunction", "iscclosure", "islclosure", "isexecutorclosure", "newcclosure", "getfunctionhash", "crypt", "writefile", "appendfile", "loadfile", "readfile", "listfiles","makefolder", "isfolder", "isfile", "delfile", "delfolder", "getcustomasset", "fireclickdetector", "firetouchinterest","fireproximityprompt","getrawmetatable","game","workspace","script","math","string","table","print","wait","BrickColor","Color3","next","pairs","ipairs","select","unpack","Instance","Vector2","Vector3","CFrame","Ray","UDim2","Enum","assert","error","warn","tick","loadstring","_G","shared","getfenv","setfenv","newproxy","setmetatable","getmetatable","os","debug","pcall","ypcall","xpcall","rawequal","rawset","rawget","tonumber","tostring","type","typeof","_VERSION","coroutine","delay","require","spawn","LoadLibrary","settings","stats","time","UserSettings","version","Axes","ColorSequence","Faces","ColorSequenceKeypoint","NumberRange","NumberSequence","NumberSequenceKeypoint","gcinfo","elapsedTime","collectgarbage","PhysicalProperties","Rect","Region3","Region3int16","UDim","Vector2int16","Vector3int16","task","RiseVelocity","Opacity","VelocityInheritance","WindAffectsDrag","TimeScale","LockedToPart","Acceleration","ShapeStyle","ShapeInOut","SpreadAngle","Speed","RotSpeed","Rate","Lifetime","EmissionDirection","ZOffset","Squash","Volume","Brightness","PantsTemplate","ShirtTemplate","BackSurface","BottomSurface","LeftSurface","RightSurface","TopSurface","FrontSurface","MoonTextureId","TextureId","SkyboxBk","SkyboxDn","SkyboxFt","SkyboxLf","SkyboxRt","SkyboxUp","StarCount","SunAngularSize","SunTextureId","MeshType","VertexColor","CastShadow","PivotOffset","WorldPivot","Size","Position","CFrame","SoundId","Name","BrickColor","Color","Transparency","Orientation","Anchored","Rotation","Health","DisplayName","C0","C1","Part0","Part1","MeshId","Texture","Face","ZIndex","DisplayDistanceType","RigType","WalkSpeed","MaxHealth","HipHeight","Disabled","Enabled","JumpPower","Text","BackgroundColor","TextColor3","BorderColor3","Scale","Offset","Active","PrimaryPart","Reflectance","Massless","CanCollide","Material","Shape","CollisionGroup","CanTouch","BinType","ExtentsOffset","MaxDistance","ResetOnSpawn","SizeOffset","StudsOffset","AnchorPoint","AutomaticSize","BackgroundTransparency","LayoutOrder","BorderMode","BorderSizePixel","Active","SizeConstraint","Visible","Image","ImageColor3","ImageRectSize","ImageRectOffset","ImageTransparency","ResampleMode","ScaleType","AlwaysOnTop","Brightness","PlayerToHideFrom"}
-
+local global_env = {
+"game", "workspace", "script", "math", "string", "table", "task", "wait", "select", "next", "Enum","print",
+"error", "warn", "tick", "assert", "shared", "loadstring", "tonumber", "tostring", "type","Character","Pitch","Volume",
+"typeof", "unpack", "print", "Instance", "CFrame", "Vector3", "Vector2", "Color3", "UDim", "UDim2", "Ray", "BrickColor",
+"OverlapParams", "RaycastParams", "Axes", "Random", "Region3", "Rect", "TweenInfo",
+"collectgarbage", "not", "utf8", "pcall", "xpcall", "_G", "setmetatable", "getmetatable", "os", "pairs", "ipairs",
+"decompile", "saveinstance", "getrawmetatable", "setrawmetatable", "checkcaller", "cloneref", "clonefunction",
+"iscclosure", "islclosure", "isexecutorclosure", "newcclosure", "getfunctionhash", "crypt", "writefile", "appendfile", "loadfile", "readfile", "listfiles",
+"RiseVelocity","Opacity","VelocityInheritance","WindAffectsDrag","TimeScale","LockedToPart","Acceleration","ShapeStyle","ShapeInOut","SpreadAngle","Speed","RotSpeed","Rate","Lifetime","EmissionDirection","ZOffset","Squash","Volume","Brightness","PantsTemplate","ShirtTemplate","BackSurface","BottomSurface","LeftSurface","RightSurface","TopSurface","FrontSurface","MoonTextureId","TextureId","SkyboxBk","SkyboxDn","SkyboxFt","SkyboxLf","SkyboxRt","SkyboxUp","StarCount","SunAngularSize","SunTextureId","MeshType","VertexColor","CastShadow","PivotOffset","WorldPivot","Size","Position","CFrame","SoundId","Name","BrickColor","Color","Transparency","Orientation","Anchored","Rotation","Health","DisplayName","C0","C1","Part0","Part1","MeshId","Texture","Face","ZIndex","DisplayDistanceType","RigType","WalkSpeed","MaxHealth","HipHeight","Disabled","Enabled","JumpPower","Text","BackgroundColor","TextColor3","BorderColor3","Scale","Offset","Active","PrimaryPart","Reflectance","Massless","CanCollide","Material","Shape","CollisionGroup","CanTouch","BinType","ExtentsOffset","MaxDistance","ResetOnSpawn","SizeOffset","StudsOffset","AnchorPoint","AutomaticSize","BackgroundTransparency","LayoutOrder","BorderMode","BorderSizePixel","Active","SizeConstraint","Visible","Image","ImageColor3","ImageRectSize","ImageRectOffset","ImageTransparency","ResampleMode","ScaleType","AlwaysOnTop","Brightness","PlayerToHideFrom","Playing","Value"
+}
 
 local function Highlight(text, keywords)
-	local K = {}
+local K = {}
 
-	for _,v in ipairs(keywords) do
-		K[v] = true
-	end
+for _,v in ipairs(keywords) do
+K[v] = true
+end
 
-	local Token = {
-		["="]=true,["."]=true,[","]=true,
-		["("]=true,[")"]=true,["["]=true,
-		["]"]=true,["{"]=true,["}"]=true,
-		[":"]=true,["*"]=true,["/"]=true,
-		["+"]=true,["-"]=true,["%"]=true,
-		[";"]=true,["~"]=true
-	}
 
-	local S = text
+local Token = {
+["="] = true,
+["."] = true,
+[","] = true,
+["("] = true,
+[")"] = true,
+["["] = true,
+["]"] = true,
+["{"] = true,
+["}"] = true,
+[":"] = true,
+["*"] = true,
+["/"] = true,
+["+"] = true,
+["-"] = true,
+["%"] = true,
+[";"] = true,
+["~"] = true
+}
 
-	S = S:gsub(".",function(c)
-		return Token[c] and " " or c
-	end)
+local S = text
 
-	S = S:gsub("%S+",function(c)
-		return K[c] and c or (" "):rep(#c)
-	end)
+S = S:gsub(".",function(c)
+return Token[c] and " " or c
+end)
+
+S = S:gsub("%S+",function(c)
+	return K[c] and c or (" "):rep(#c)
+end)
 
 	return S
 end
 
 local function hTokens(text)
-	local Token = {
-		["="]=true,["."]=true,[","]=true,
-		["("]=true,[")"]=true,["["]=true,
-		["]"]=true,["{"]=true,["}"]=true,
-		[":"]=true,["*"]=true,["/"]=true,
-		["+"]=true,["-"]=true,["%"]=true,
-		[";"]=true,["~"]=true
-	}
+
+local Token = {
+["="] = true,
+["."] = true,
+[","] = true,
+["("] = true,
+[")"] = true,
+["["] = true,
+["]"] = true,
+["{"] = true,
+["}"] = true,
+[":"] = true,
+["*"] = true,
+["/"] = true,
+["+"] = true,
+["-"] = true,
+["%"] = true,
+[";"] = true,
+["~"] = true
+}
 
 	local A = ""
 
@@ -618,7 +653,9 @@ local function UpdateHighlight()
 	Globals_.Text = Highlight(s,global_env)
 	RemoteHighlight_.Text = Highlight(s,{
 		"FireServer",
-		"InvokeServer"
+		"InvokeServer",
+		"FireClient",
+		"InvokeClient"
 	})
 
 	Tokens_.Text = hTokens(s)
