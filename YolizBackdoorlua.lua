@@ -7,7 +7,7 @@
 ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝
 
 ---------------------------------------------------------------------------------------------
-	Invite Discord Server : discord.com/invite/Gnabm6WfhA 
+	New Invite Discord Server : https://discord.com/invite/jz6ZT4UwBd 
 	skidded script from : backdoor exe v6x (@ik4os)
 	Fixed Log Game
 ---------------------------------------------------------------------------------------------
@@ -159,7 +159,7 @@ LMG2L["Servertext_c"]["AutomaticSize"] = Enum.AutomaticSize.XY;
 LMG2L["Servertext_c"]["MultiLine"] = true;
 LMG2L["Servertext_c"]["ClearTextOnFocus"] = false;
 LMG2L["Servertext_c"]["Size"] = UDim2.new(0, 448, 0, 290);
-LMG2L["Servertext_c"]["Text"] = [[-- https://discord.gg/Gnabm6WfhA]];
+LMG2L["Servertext_c"]["Text"] = [[-- https://discord.com/invite/jz6ZT4UwBd]];
 LMG2L["Servertext_c"]["BackgroundTransparency"] = 1;
 LMG2L["TextLabel2_d"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
 LMG2L["TextLabel2_d"]["TextWrapped"] = true;
