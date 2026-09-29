@@ -8,8 +8,7 @@
 
 ---------------------------------------------------------------------------------------------
 	New Invite Discord Server : https://discord.com/invite/jz6ZT4UwBd 
-	skidded script from : backdoor exe v6x (@ik4os)
-	Fixed Log Game
+	Taken/Skidding script from : backdoor exe v6x (@ik4os)
 ---------------------------------------------------------------------------------------------
 ]]
 
